@@ -3,7 +3,7 @@ from AutoShareFacebook import AutoShare
 
 script, post_url = argv
 #can access variable post_url
-caption_text = raw_input("Type the caption here: ")
+caption_text = soup =open('title.txt', 'r').read()
 
 auto = AutoShare()
 
