@@ -84,7 +84,8 @@ class AutoShare:
 
                 click_post = self.driver.find_element_by_class_name("_332r")
                 click_post.click()
-                time.sleep(10)
+                # Replace 40.75 and 35.5 with your own values (seconds). Prevents spam-like behaviour.
+                time.sleep(40.75 + 35.5*random.random())
                 print "Successfully posted in " + str(i.split('https://www.facebook.com/groups/')[1].split('/')[0])
             except:
                 print"Error posting in " + str(i.split('https://www.facebook.com/groups/')[1].split('/')[0])
