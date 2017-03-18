@@ -22,6 +22,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
+import random
 
 class AutoShare:
 
@@ -30,8 +31,8 @@ class AutoShare:
         chrome_options = webdriver.ChromeOptions()
         prefs = {"profile.default_content_setting_values.notifications": 2}
         chrome_options.add_experimental_option("prefs", prefs)
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
-        self.driver.maximize_window()
+        self.driver = webdriver.Chrome(chrome_options=chrome_options,executable_path='C:/Path/To/Your/chromedriver.exe')
+        #self.driver.maximize_window()
         self.driver.get(self.url)
 
     def auth(self,uname,passd):
